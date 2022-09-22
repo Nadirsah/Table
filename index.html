@@ -102,8 +102,8 @@ $(document).ready( function () {
 <script>
 
   var table = document.getElementById("myTable"),
-  sumVal = 0;
-for (var i = 5; i < table.rows.length; i++) {
+  sumVal = 5;
+for (var i = 1; i < table.rows.length; i++) {
   sumVal = sumVal + parseFloat(isNaN(table.rows[i].cells[1].innerHTML));
 }
 
