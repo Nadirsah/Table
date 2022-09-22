@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+<div class="container mt-5">
+
+<table class="table" id="myTable">
+
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">name</th>
+    <th scope="col">group</th>
+    <th scope="col">count</th>
+   
+  </tr>
+</thead>
+<tbody>
+<!-- <tr>
+    <th>
+      <form action="{{route('axtar')}}" >
+@csrf
+
+<input type="text" name="search" style="width:200px"  autofocus >
+<button type="submit"   style="margin-left:-60px" > axtar</button>
+
+
+</form>
+</th>
+
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+   
+  </tr> -->
+
+
+<tr>
+<td>fg</td>
+<td>adfhgtwywqrt</td>
+<td>adfgh</td>
+<td id="price">123</td>
+
+</tr>
+<tr>
+    <td>fg</td>
+    <td>adfhg</td>
+    <td>adfgh</td>
+    <td id="price">123</td>
+    
+    </tr>
+    <tr>
+        <td>fg</td>
+        <td>adfhg</td>
+        <td>adfgh</td>
+        <td id="price">123</td>
+        
+        </tr>
+  
+
+</tbody>
+<tfoot>
+<tr class="tr">
+    <th scope="col">#</th>
+    <th scope="col">name</th>
+    <th scope="col">group</th>
+    <th scope="col" id="result"></th>
+   
+    
+  </tr>
+</tfoot>
+</table>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+  <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+
+  //datatble
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+
+
+
+<!-- table -->
+<script>
+
+  var table = document.getElementById("myTable"),
+  sumVal = 0;
+for (var i = 5; i < table.rows.length; i++) {
+  sumVal = sumVal + parseFloat(isNaN(table.rows[i].cells[1].innerHTML));
+}
+
+document.getElementById("result").innerHTML = "SubTotal =" + sumVal;
+console.log(sumVal);
+</script>
+
+<!-- //https://stackoverflow.com/questions/58923201/how-do-i-sum-the-price-column-from-html-table-using-javascript -->
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
